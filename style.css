@@ -1,0 +1,28 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    background-color: #333;
+}
+
+.navbar-nav{
+    margin-left: auto;
+    color: #fff;
+    padding-right: 100px;
+}
+
+.navbar-nav li a{
+    color:#fff;
+    text-decoration: none;
+}
+.navbar-toggler-icon {
+    color:#fff;
+    text-decoration: none;
+}
+
+
+
+/* section one  */
