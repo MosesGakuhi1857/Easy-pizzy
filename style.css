@@ -2,7 +2,7 @@
 *{
     margin: 0;
     padding: 0;
-    /* border: 1px dashed greenyellow; */
+      /* border: 1px dashed greenyellow;   */
 }
 nav{
     overflow: hidden;
@@ -25,7 +25,7 @@ nav{
     color:#fff;
     text-decoration: none;
 }
-.navbar-toggler-icon {
+ .navbar button aria {
     color:#fff;
     /* text-decoration: none; */
 /* margin-left: -200px; */
@@ -166,12 +166,25 @@ p{
     height:auto;
     width: 100%;
     background-size: cover;
+    text-align: center;
+    
 }
 form{
     width:500px;
     margin: auto;
     background-color:rgba(0,0,0,0.5);
     color:rgb(216, 127, 25) ;
+    border-radius: 10px;
+    padding: 50px;
+}
+.sec-4 button{
+    width: 100px;
+    margin: auto;
+    color:rgb(216, 127, 25);
+    margin-top: 10px;
+    transform: scale(0.85);
+    border-radius: 40%;
+    
 }
 /* end of section 4 */
 
@@ -199,6 +212,148 @@ social-icons{
 /* end of footer */
 
 
-/* @media screen(max-width:) { */
+ @media screen and (max-width:1400px) {
+   .sec-2 p {
+    position:relative;
+    top:20%; 
+    left:10%;
+   } 
+   .chef{
+    position:relative;
+    top:20%;
+    margin-left:-50px;
+   }
+ } 
+
+ @media screen and (max-width:1220px){
+
+    .p{
+        font-size: 50px;
+        padding-top: 200px;
     
-/* } */
+    }  
+    .p span{
+        font-size: 2.5rem;
+        
+    } 
+    .sec-2 p {
+        position:relative;
+        top:18%; 
+        left:12%;
+       } 
+       .chef{
+        position:relative;
+        top:18%;
+        margin-left:-30px;
+       }
+       
+       .navbar{
+           height:15%;
+       }
+       .navbar-brand{
+           height: 110px;
+           width:120px
+       }
+ }
+
+ @media screen and (max-width:1200px){
+    .sec-2 p {
+        position:relative;
+        top:25%; 
+        left:40%;
+        width:100% ;
+       }  
+       .chef{
+        position:relative;
+        top:-10%;
+        margin-left:-150px;
+       }
+       .navbar{
+        width: 98%;
+        margin-left:10px;
+    }
+        .form{
+            width:450px;
+    }
+    .variety{
+       position: relative;
+       left: -30px;
+    }
+ }
+
+ @media screen and (max-width:990px){
+#one,#two,#three,#four{
+    margin-left: -50px;
+}
+.navbar{
+    width: 98%;
+    margin-left:12px;
+}
+.chef{
+    position:relative;
+    top:-10%;
+    margin-left:-90px;
+   }
+   .sec-2 p {
+    position:relative;
+    top:20%; 
+    left:0%;
+    width:100% ;
+   }  
+   .p{
+    font-size: 47px;
+    padding-top: 150px;
+
+}  
+.p span{
+    font-size: 2.3rem;
+    
+} 
+.row{
+position: relative;
+left:10%;
+}
+ }
+
+ @media screen and (max-width:790px){
+    .navbar{
+        width: 85%;
+        height: auto;
+        margin-left:12px;
+    }
+    .navbar button {
+        position: relative;
+        right: 20px;
+    }
+    .form{
+        width:200px;
+        padding: 10px;
+        margin-left: -50px;
+    }
+    .sec-2 p {
+        position:relative;
+        top:10%; 
+        left:10%;
+        width:70% ;
+}
+.row{
+    position: relative;
+    left:0%;
+    }
+    .p{
+        font-size: 30px;
+        padding-top: 150px;
+    
+    }  
+    .p span{
+        font-size: 2rem;
+        
+    } 
+    #form2{
+        width:300px;
+    /* margin-left: -10px; */
+    }
+    h2{
+        font-size: 1.8rem;
+    }
+}
