@@ -53,14 +53,43 @@ $(document).ready(function () {
     //         }
     //         break;
 
-    let price, totalPrice;
+    let price,totalPrice;
     switch (pizzaName) {
         case pizzaName = "BIANCA":
             switch (size) {
-                case
+                case size = "large":
+                price = 1000;
+        if ( crust === "crisy"){
+            totalPrice=(price * quantity) + 250
+        } else if (crust === "stuffed"){
+            totalPrice=(price*quantity)+ 160
+        } else if (crust === "Glutten-free"){
+            totalPrice = (price * quantity)+ 220
+        };
+            };
+           break;
+           case size = "medium":
+               price = 800;
+               if(crust === "crispy"){
+                   totalPrice=(price* quantity)+ 250
 
-            }
+               } else if (crust === "stuffed"){
+                   totalPrice= (price * quantity)+ 160
 
+               } else if (crust === "Glutten-free"){
+                   totalPrice= (price*quantity)+220
+               };
+               break;
+
+               case size = "small":
+                   price = 500;
+                   if (crust === "crispy"){
+                       totalPrice=(price *quantity)+250
+                   }else if (crust === "stuffed"){
+                       totalPrice=(price* quantity)+180
+                   }else if (crust === "Glutten-free"){
+                       totalPrice=(price*quantity)+ 220
+                   };
 
     }
 
