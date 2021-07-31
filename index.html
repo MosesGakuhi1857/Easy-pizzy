@@ -25,8 +25,8 @@
 
 <body>
     <div class="container-fluid">
-        <nav class="navbar navbar-expand-md fixed-top">
-            <img src="./assets/logo.png" class="navbar-brand" alt="logo">
+        <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark ">
+            <img src="./assets/logo.png" class="navbar-brand" height="120px" width="160px" alt="logo">
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
                 aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -120,22 +120,22 @@
             </div>
 
             <div class="row variety">
-                <div class="col-lg-3 ">
+                <div class="col-lg-3 " id="one">
                     <p class="variety-p"><span>25</span><br>
                         Pizza variety</p>
                 </div>
 
                 <div class="col-lg-3">
-                    <p class="variety-p"><span>10</span><br>
+                    <p class="variety-p" id="two"><span>10</span><br>
                         Toppings variety</p>
                 </div>
 
                 <div class="col-lg-3">
-                    <p class="variety-p"><span>5</span> <br>
+                    <p class="variety-p" id="three"><span>5</span> <br>
                         Crust variety </p>
                 </div>
 
-                <div class="col-lg-3">
+                <div class="col-lg-3" id="four">
                     <p class="variety-p"><span>20</span><br>
                         Drinks variety</p>
                 </div>
@@ -257,53 +257,70 @@
     <!-- start of section 4 -->
     <section class="sec-4" id="section4">
         <h2>Order</h2>
-        <div class="container-fluid">
-            <div class="form">
-                <form action="">
-                    <label for="pizza">Pick your poison</label>
-                    <select name="pizza" class="form-control">
-                        <option value="">BIANCA</option>
-                        <option value="">GIANNI</option>
-                        <option value="">SOPRANO</option>
-                        <option value="">PEPPERONI</option>
-                        <option value="">SPINOTTA</option>
-                        <option value="">TONI RONI</option>
-                        <option value="">HONEY HEAT</option>
-                        <option value="">CHICKEN TIKKA</option>
-                        <option value="">VEGETALE</option>
-                    </select><br>
+        <div class="container">
+            <div class="row pizza">
+                <div class="col-lg-6 form">
+                    <form action="">
+                        <label for="pizza">Pick your poison</label>
+                        <select name="pizza" class="form-control" id="pizza">
+                            <option value="">BIANCA</option>
+                            <option value="">GIANNI</option>
+                            <option value="">SOPRANO</option>
+                            <option value="">PEPPERONI</option>
+                            <option value="">SPINOTTA</option>
+                            <option value="">TONI RONI</option>
+                            <option value="">HONEY HEAT</option>
+                            <option value="">CHICKEN TIKKA</option>
+                            <option value="">VEGETALE</option>
+                        </select><br>
 
-                    <label for="size">Size</label>
-                    <select name="size" class="form-control">
-                        <option value="size">large</option>
-                        <option value="size">medium</option>
-                        <option value="size">small</option>
-                    </select><br>
+                        <label for="size">Size</label>
+                        <select name="size" class="form-control" id="size">
+                            <option value="size">large</option>
+                            <option value="size">medium</option>
+                            <option value="size">small</option>
+                        </select><br>
 
-                    <label for="crust">Crust</label><br>
-                    <select type="" name="crust" class="form-control">
-                        <option value="">Crispy</option>
-                        <option value="">Stuffed</option>
-                        <option value="">Glutten-free</option>
-                    </select><br>
+                        <label for="crust">Crust</label><br>
+                        <select type="" name="crust" class="form-control" id="crust">
+                            <option value="">Crispy</option>
+                            <option value="">Stuffed</option>
+                            <option value="">Glutten-free</option>
+                        </select><br>
 
-                    <label for="toppings">Toppings</label>
-                    <select name="toppings" class="form-control">
-                        <option value="">pineapple @ 150</option>
-                        <option value="">Tomato @ 150</option>
-                        <option value="">Avocado @ 150</option><br>
+                        <label for="toppings">Toppings</label>
+                        <select name="toppings" class="form-control" id="toppings">
+                            <option value="">pineapple @ 150</option>
+                            <option value="">Tomato @ 150</option>
+                            <option value="">Avocado @ 150</option><br>
 
-                        <option value="">beef @ 150</option>
-                        <option value="">bread scrambles @ 150</option>
-                        <option value="">chicken scrambles @ 150</option><br>
+                            <option value="">beef @ 150</option>
+                            <option value="">bread scrambles @ 150</option>
+                            <option value="">chicken scrambles @ 150</option><br>
 
-                    </select><br>
+                        </select><br>
 
-                    <label for="quantity">quantity</label>
-                    <input type="number" name="quantity" class="form-control" min="1" placeholder="0"><br>
+                        <label for="quantity">quantity</label>
+                        <input type="number" name="quantity" class="form-control" id="quantity" min="1" placeholder="0"><br>
+                        <div class="d-flex">
+                            <button class="form-control pick-delivery" >delivery</button>
+                            <button class="form-control  pick-delivery">pick up</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-6" >
+                    <form action="" id="form2">
+                        <label for="fullNames">full names</label><br>
+                        <input type="text" class="form-control" placeholder="name"><br>
+                        <label for="location">Location</label><br>
+                        <input type="text" class="form-control" placeholder="Enter your location"><br>
+                        <label for="tel">tel</label><br>
+                        <input type="text" placeholder="phone number" class="form-control" max="10"><br>
 
-                    <button>check out</button>
-                </form>
+                        <button class="form-control">checkout</button>
+                    </form>
+                </div>
+
             </div>
     </section>
     <!-- end of section 4 -->
@@ -334,7 +351,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-
+    <script src="pizza.js"></script>
 </body>
 
 </html>
