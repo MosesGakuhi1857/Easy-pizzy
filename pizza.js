@@ -1,424 +1,464 @@
 $(document).ready(function () {
 
-    $(".pick-delivery").click(function () {
-     9
-        let crust = $(" #crust option:selected").val();
-        let toppings = $("#toppings option:selected").val();
-        let size = $("#size option:selected").val();
-        let quantity = $("#quantity").val();
-        console.log(pizzaName);
-        console.log(crust);
-    })
-    pizzaSelectChange = function(){
+    $(".pick-delivery").click(function (event) {
+        // let pizzaName = $("#pizza option:selected").val();
+        // let crust = $(" #crust option:selected").val();
+        // let toppings = $("#toppings option:selected").val();
+        // let size = $("#size option:selected").val();
+        // let quantity = $("#quantity").val();
+      
+        let pizzaName = this.pizzaName;
+        let crust = this.crust;
+        let toppings = this.toppings
+        let size = this.size;
+        let quantity = this.quantity;
+        let price, totalPrice;
+        // console.log(pizzaName);
+        // console.log(crust);
+        switch (pizzaName) {
+            case pizzaName = "bianca":
+                switch (size) {
+                    case size = "large":
+                        price = 1000;
+                        if (crust === "crisy") {
+                            totalPrice = (price * quantity) + 250
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 160
+                        } else if (crust === "glutten") {
+                            totalPrice = (price * quantity) + 220
+                        };
+
+                        break;
+                    case size = "medium":
+                        price = 800;
+                        if (crust === "crispy") {
+                            totalPrice = (price * quantity) + 250
+
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 160
+
+                        } else if (crust === "glutten") {
+                            totalPrice = (price * quantity) + 220
+                        };
+                        break;
+
+                    case size = "small":
+                        price = 500;
+                        if (crust === "crispy") {
+                            totalPrice = (price * quantity) + 250
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 180
+                        } else if (crust === "glutten") {
+                            totalPrice = (price * quantity) + 220
+                        };
+                        break;
+                }
+                break;
+
+
+            case pizzaName = "toni":
+                switch (size) {
+                    case size = "large":
+                        price = 1000;
+                        if (crust === "crisy") {
+                            totalPrice = (price * quantity) + 250
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 160
+                        } else if (crust === "glutten") {
+                            totalPrice = (price * quantity) + 220
+                        };
+
+                        break;
+                    case size = "medium":
+                        price = 800;
+                        if (crust === "crispy") {
+                            totalPrice = (price * quantity) + 250
+
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 160
+
+                        } else if (crust === "glutten") {
+                            totalPrice = (price * quantity) + 220
+                        };
+                        break;
+
+                    case size = "small":
+                        price = 500;
+                        if (crust === "crispy") {
+                            totalPrice = (price * quantity) + 250
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 180
+                        } else if (crust === "glutten") {
+                            totalPrice = (price * quantity) + 220
+                        };
+                        break;
+                }
+                break;
+
+            case pizzaName = "spinotta":
+                switch (size) {
+                    case size = "large":
+                        price = 1000;
+                        if (crust === "crisy") {
+                            totalPrice = (price * quantity) + 250
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 160
+                        } else if (crust === "Glutten-free") {
+                            totalPrice = (price * quantity) + 220
+                        };
+
+                        break;
+                    case size = "medium":
+                        price = 800;
+                        if (crust === "crispy") {
+                            totalPrice = (price * quantity) + 250
+
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 160
+
+                        } else if (crust === "Glutten-free") {
+                            totalPrice = (price * quantity) + 220
+                        };
+                        break;
+                        this.totalPrice = totalPrice;
+
+
+                    case size = "small":
+                        price = 500;
+                        if (crust === "crispy") {
+                            totalPrice = (price * quantity) + 250
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 180
+                        } else if (crust === "glutten") {
+                            totalPrice = (price * quantity) + 220
+                        };
+                        break;
+                }
+                break;
+
+            case pizzaName = "soprano":
+                switch (size) {
+                    case size = "large":
+                        price = 1000;
+                        if (crust === "crisy") {
+                            totalPrice = (price * quantity) + 250
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 160
+                        } else if (crust === "glutten") {
+                            totalPrice = (price * quantity) + 220
+                        };
+
+                        break;
+                    case size = "medium":
+                        price = 800;
+                        if (crust === "crispy") {
+                            totalPrice = (price * quantity) + 250
+
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 160
+
+                        } else if (crust === "glutten") {
+                            totalPrice = (price * quantity) + 220
+                        };
+                        break;
+
+                    case size = "small":
+                        price = 500;
+                        if (crust === "crispy") {
+                            totalPrice = (price * quantity) + 250
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 180
+                        } else if (crust === "glutten") {
+                            totalPrice = (price * quantity) + 220
+                        };
+                        break;
+                }
+                break;
+
+            case pizzaName = "pepperoni":
+                switch (size) {
+                    case size = "large":
+                        price = 1000;
+                        if (crust === "crisy") {
+                            totalPrice = (price * quantity) + 250
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 160
+                        } else if (crust === "glutten") {
+                            totalPrice = (price * quantity) + 220
+                        };
+
+                        break;
+                    case size = "medium":
+                        price = 800;
+                        if (crust === "crispy") {
+                            totalPrice = (price * quantity) + 250
+
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 160
+
+                        } else if (crust === "glutten") {
+                            totalPrice = (price * quantity) + 220
+                        };
+                        break;
+
+                    case size = "small":
+                        price = 500;
+                        if (crust === "crispy") {
+                            totalPrice = (price * quantity) + 250
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 180
+                        } else if (crust === "glutten") {
+                            totalPrice = (price * quantity) + 220
+                        };
+                        break;
+                }
+                break;
+
+            case pizzaName = "vegetale":
+                switch (size) {
+                    case size = "large":
+                        price = 1000;
+                        if (crust === "crisy") {
+                            totalPrice = (price * quantity) + 250
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 160
+                        } else if (crust === "glutten") {
+                            totalPrice = (price * quantity) + 220
+                        };
+
+                        break;
+                    case size = "medium":
+                        price = 800;
+                        if (crust === "crispy") {
+                            totalPrice = (price * quantity) + 250
+
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 160
+
+                        } else if (crust === "glutten") {
+                            totalPrice = (price * quantity) + 220
+                        };
+                        break;
+
+                    case size = "small":
+                        price = 500;
+                        if (crust === "crispy") {
+                            totalPrice = (price * quantity) + 250
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 180
+                        } else if (crust === "glutten") {
+                            totalPrice = (price * quantity) + 220
+                        };
+                        break;
+                }
+                break;
+
+            case pizzaName = "chicken":
+                switch (size) {
+                    case size = "large":
+                        price = 1000;
+                        if (crust === "crisy") {
+                            totalPrice = (price * quantity) + 250
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 160
+                        } else if (crust === "glutten") {
+                            totalPrice = (price * quantity) + 220
+                        };
+
+                        break;
+                    case size = "medium":
+                        price = 800;
+                        if (crust === "crispy") {
+                            totalPrice = (price * quantity) + 250
+
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 160
+
+                        } else if (crust === "glutten") {
+                            totalPrice = (price * quantity) + 220
+                        };
+                        break;
+
+                    case size = "small":
+                        price = 500;
+                        if (crust === "crispy") {
+                            totalPrice = (price * quantity) + 250
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 180
+                        } else if (crust === "glutten") {
+                            totalPrice = (price * quantity) + 220
+                        };
+                        break;
+                }
+                break;
+
+            case pizzaName = "honey":
+                switch (size) {
+                    case size = "large":
+                        price = 1000;
+                        if (crust === "crisy") {
+                            totalPrice = (price * quantity) + 250
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 160
+                        } else if (crust === "glutten") {
+                            totalPrice = (price * quantity) + 220
+                        };
+
+                        break;
+                    case size = "medium":
+                        price = 800;
+                        if (crust === "crispy") {
+                            totalPrice = (price * quantity) + 250
+
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 160
+
+                        } else if (crust === "glutten") {
+                            totalPrice = (price * quantity) + 220
+                        };
+                        break;
+
+                    case size = "small":
+                        price = 500;
+                        if (crust === "crispy") {
+                            totalPrice = (price * quantity) + 250
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 180
+                        } else if (crust === "glutten") {
+                            totalPrice = (price * quantity) + 220
+                        };
+                        break;
+                }
+                break;
+
+            case pizzaName = "gianni":
+                switch (size) {
+                    case size = "large":
+                        price = 1000;
+                        if (crust === "crisy") {
+                            totalPrice = (price * quantity) + 250
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 160
+                        } else if (crust === "glutten") {
+                            totalPrice = (price * quantity) + 220
+                        };
+
+                        break;
+                    case size = "medium":
+                        price = 800;
+                        if (crust === "crispy") {
+                            totalPrice = (price * quantity) + 250
+
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 160
+
+                        } else if (crust === "glutten") {
+                            totalPrice = (price * quantity) + 220
+                        };
+                        break;
+
+                    case size = "small":
+                        price = 500;
+                        if (crust === "crispy") {
+                            totalPrice = (price * quantity) + 250
+                        } else if (crust === "stuffed") {
+                            totalPrice = (price * quantity) + 180
+                        } else if (crust === "glutten") {
+                            totalPrice = (price * quantity) + 220
+                        };
+                        break;
+                }
+                break;
+
+        }
+        switch (toppings) {
+            case toppings = "pineapple":
+                totalPrice = totalPrice + 150;
+                break;
+            case toppings = "tomato":
+                totalPrice = totalPrice + 120;
+                break;
+            case toppings = "avocado":
+                totalPrice = totalPrice + 120;
+                break;
+            case toppings = "beef":
+                totalPrice = totalPrice + 180;
+                break;
+            case toppings = "chicken":
+                totalPrice = totalPrice + 170;
+                break;
+            case toppings = "bread":
+                totalPrice = totalPrice + 150;
+                break;
+        }
+        this.totalPrice = totalPrice;
+        document.getElementById("total").innerHTML = this.totalPrice;
+
+        // let newOrder = new getPizza (pizzaName,size,crust,toppings,quantity,totalPrice);
+        console.log(totalPrice);
+        console.log(this.pizzaName);
+        event.preventDefault(); 
+    })  
+    // appending
+    pizzaSelectChange = function () {
         console.log("mayonnaise")
-        
+
         this.pizzaName = $("#pizza option:selected").val();
         console.log(this.pizzaName);
-        
-        document.getElementById("pizzaname").innerHTML=this.pizzaName;
+
+        document.getElementById("pizzaname").innerHTML = this.pizzaName;
     }
 
+    sizeSelectChange = function () {
+        this.size = $("#size option:selected").val();
+        console.log(this.size);
 
-    function getPizza  (pizzaName, size, crust, toppings, quantity, totalPrice){
+        document.getElementById("pizzasize").innerHTML = this.size;
+    }
+
+    crustSelectChange = function () {
+        this.crust = $("#crust option:selected").val();
+        console.log(this.crust);
+
+        document.getElementById("pizzacrust").innerHTML = this.crust;
+    }
+
+    toppingsSelectChange = function () {
+        this.toppings = $("#toppings option:selected").val();
+        console.log(this.crust);
+
+        document.getElementById("pizzatoppings").innerHTML = this.toppings;
+    }
+
+    quantitySelectChange = function () {
+        this.quantity = $("#quantity").val();
+        console.log(this.quantity);
+
+        document.getElementById("pizzaquantity").innerHTML = this.quantity;
+    }
+    // this.totalPrice = totalPrice ;
+    // document.getElementById("total").innerHTML=this.totalPrice;
+    // end of appending
+
+    function getPizza(pizzaName, size, crust, toppings, quantity, totalPrice) {
         this.pizzaName = pizzaName;
-        this.size=size;
-        this.crust=crust;
-        this.toppings=toppings;
-        this.quantity=quantity;
-        this.total=totalPrice;
+        this.size = size;
+        this.crust = crust;
+        this.toppings = toppings;
+        this.quantity = quantity;
+        this.total = totalPrice;
     }
+    // let pizzaName = $("#pizza option:selected").val();
+    // let crust = $(" #crust option:selected").val();
+    // let quantity = $("#quantity").val();
+    //  let price, totalPrice;
+
+    // $("#receipt").append('<tr><td id="pizzaname">'+this.pizzaName +'</td><td id="pizzasize">' + 
+    // newOrder.size + '</td><td id="pizzacrust">'+newOrder.crust + '</td><td id="pizzatoppings">'+newOrder.toppings+'</td><td id="pizzaquantity">'+newOrder.quantity+'</td><td id="total">'+newOrder.totalPrice+'</td></tr>');
 
 
 
-    var pizzaName = $("#pizza option:selected").val();
-    var toppings = $("#toppings option:selected").val();
-    let size = $("#size option:selected").val();
-    let crust = $(" #crust option:selected").val();
-    let quantity = $("#quantity").val();
-    let price, totalPrice;
-    switch (pizzaName) {
-        case pizzaName = "bianca":
-            switch (size) {
-                case size = "large":
-                    price = 1000;
-                    if (crust === "crisy") {
-                        totalPrice = (price * quantity) + 250
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 160
-                    } else if (crust === "glutten") {
-                        totalPrice = (price * quantity) + 220
-                    };
-
-                    break;
-                case size = "medium":
-                    price = 800;
-                    if (crust === "crispy") {
-                        totalPrice = (price * quantity) + 250
-
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 160
-
-                    } else if (crust === "glutten") {
-                        totalPrice = (price * quantity) + 220
-                    };
-                    break;
-
-                case size = "small":
-                    price = 500;
-                    if (crust === "crispy") {
-                        totalPrice = (price * quantity) + 250
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 180
-                    } else if (crust === "glutten") {
-                        totalPrice = (price * quantity) + 220
-                    };
-                    break;
-            }
-            break;
-
-
-        case pizzaName = "toni":
-            switch (size) {
-                case size = "large":
-                    price = 1000;
-                    if (crust === "crisy") {
-                        totalPrice = (price * quantity) + 250
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 160
-                    } else if (crust === "glutten") {
-                        totalPrice = (price * quantity) + 220
-                    };
-
-                    break;
-                case size = "medium":
-                    price = 800;
-                    if (crust === "crispy") {
-                        totalPrice = (price * quantity) + 250
-
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 160
-
-                    } else if (crust === "glutten") {
-                        totalPrice = (price * quantity) + 220
-                    };
-                    break;
-
-                case size = "small":
-                    price = 500;
-                    if (crust === "crispy") {
-                        totalPrice = (price * quantity) + 250
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 180
-                    } else if (crust === "glutten") {
-                        totalPrice = (price * quantity) + 220
-                    };
-                    break;
-            }
-            break;
-
-        case pizzaName = "spinotta":
-            switch (size) {
-                case size = "large":
-                    price = 1000;
-                    if (crust === "crisy") {
-                        totalPrice = (price * quantity) + 250
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 160
-                    } else if (crust === "Glutten-free") {
-                        totalPrice = (price * quantity) + 220
-                    };
-
-                    break;
-                case size = "medium":
-                    price = 800;
-                    if (crust === "crispy") {
-                        totalPrice = (price * quantity) + 250
-
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 160
-
-                    } else if (crust === "Glutten-free") {
-                        totalPrice = (price * quantity) + 220
-                    };
-                    break;
-
-                case size = "small":
-                    price = 500;
-                    if (crust === "crispy") {
-                        totalPrice = (price * quantity) + 250
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 180
-                    } else if (crust === "glutten") {
-                        totalPrice = (price * quantity) + 220
-                    };
-                    break;
-            }
-            break;
-
-        case pizzaName = "soprano":
-            switch (size) {
-                case size = "large":
-                    price = 1000;
-                    if (crust === "crisy") {
-                        totalPrice = (price * quantity) + 250
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 160
-                    } else if (crust === "glutten") {
-                        totalPrice = (price * quantity) + 220
-                    };
-
-                    break;
-                case size = "medium":
-                    price = 800;
-                    if (crust === "crispy") {
-                        totalPrice = (price * quantity) + 250
-
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 160
-
-                    } else if (crust === "glutten") {
-                        totalPrice = (price * quantity) + 220
-                    };
-                    break;
-
-                case size = "small":
-                    price = 500;
-                    if (crust === "crispy") {
-                        totalPrice = (price * quantity) + 250
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 180
-                    } else if (crust === "glutten") {
-                        totalPrice = (price * quantity) + 220
-                    };
-                    break;
-            }
-            break;
-
-        case pizzaName = "pepperoni":
-            switch (size) {
-                case size = "large":
-                    price = 1000;
-                    if (crust === "crisy") {
-                        totalPrice = (price * quantity) + 250
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 160
-                    } else if (crust === "glutten") {
-                        totalPrice = (price * quantity) + 220
-                    };
-
-                    break;
-                case size = "medium":
-                    price = 800;
-                    if (crust === "crispy") {
-                        totalPrice = (price * quantity) + 250
-
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 160
-
-                    } else if (crust === "glutten") {
-                        totalPrice = (price * quantity) + 220
-                    };
-                    break;
-
-                case size = "small":
-                    price = 500;
-                    if (crust === "crispy") {
-                        totalPrice = (price * quantity) + 250
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 180
-                    } else if (crust === "glutten") {
-                        totalPrice = (price * quantity) + 220
-                    };
-                    break;
-            }
-            break;
-
-        case pizzaName = "vegetale":
-            switch (size) {
-                case size = "large":
-                    price = 1000;
-                    if (crust === "crisy") {
-                        totalPrice = (price * quantity) + 250
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 160
-                    } else if (crust === "glutten") {
-                        totalPrice = (price * quantity) + 220
-                    };
-
-                    break;
-                case size = "medium":
-                    price = 800;
-                    if (crust === "crispy") {
-                        totalPrice = (price * quantity) + 250
-
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 160
-
-                    } else if (crust === "glutten") {
-                        totalPrice = (price * quantity) + 220
-                    };
-                    break;
-
-                case size = "small":
-                    price = 500;
-                    if (crust === "crispy") {
-                        totalPrice = (price * quantity) + 250
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 180
-                    } else if (crust === "glutten") {
-                        totalPrice = (price * quantity) + 220
-                    };
-                    break;
-            }
-            break;
-
-        case pizzaName = "chicken":
-            switch (size) {
-                case size = "large":
-                    price = 1000;
-                    if (crust === "crisy") {
-                        totalPrice = (price * quantity) + 250
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 160
-                    } else if (crust === "glutten") {
-                        totalPrice = (price * quantity) + 220
-                    };
-
-                    break;
-                case size = "medium":
-                    price = 800;
-                    if (crust === "crispy") {
-                        totalPrice = (price * quantity) + 250
-
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 160
-
-                    } else if (crust === "glutten") {
-                        totalPrice = (price * quantity) + 220
-                    };
-                    break;
-
-                case size = "small":
-                    price = 500;
-                    if (crust === "crispy") {
-                        totalPrice = (price * quantity) + 250
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 180
-                    } else if (crust === "glutten") {
-                        totalPrice = (price * quantity) + 220
-                    };
-                    break;
-            }
-            break;
-
-        case pizzaName = "honey":
-            switch (size) {
-                case size = "large":
-                    price = 1000;
-                    if (crust === "crisy") {
-                        totalPrice = (price * quantity) + 250
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 160
-                    } else if (crust === "glutten") {
-                        totalPrice = (price * quantity) + 220
-                    };
-
-                    break;
-                case size = "medium":
-                    price = 800;
-                    if (crust === "crispy") {
-                        totalPrice = (price * quantity) + 250
-
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 160
-
-                    } else if (crust === "glutten") {
-                        totalPrice = (price * quantity) + 220
-                    };
-                    break;
-
-                case size = "small":
-                    price = 500;
-                    if (crust === "crispy") {
-                        totalPrice = (price * quantity) + 250
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 180
-                    } else if (crust === "glutten") {
-                        totalPrice = (price * quantity) + 220
-                    };
-                    break;
-            }
-            break;
-
-        case pizzaName = "gianni":
-            switch (size) {
-                case size = "large":
-                    price = 1000;
-                    if (crust === "crisy") {
-                        totalPrice = (price * quantity) + 250
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 160
-                    } else if (crust === "glutten") {
-                        totalPrice = (price * quantity) + 220
-                    };
-
-                    break;
-                case size = "medium":
-                    price = 800;
-                    if (crust === "crispy") {
-                        totalPrice = (price * quantity) + 250
-
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 160
-
-                    } else if (crust === "glutten") {
-                        totalPrice = (price * quantity) + 220
-                    };
-                    break;
-
-                case size = "small":
-                    price = 500;
-                    if (crust === "crispy") {
-                        totalPrice = (price * quantity) + 250
-                    } else if (crust === "stuffed") {
-                        totalPrice = (price * quantity) + 180
-                    } else if (crust === "glutten") {
-                        totalPrice = (price * quantity) + 220
-                    };
-                    break;
-            }
-            break;
-
- }
-    switch (toppings) {
-        case toppings = "pineapple":
-            totalPrice = totalPrice + 150;
-            break;
-        case toppings = "tomato":
-            totalPrice = totalPrice + 120;
-            break;
-        case toppings = "avocado":
-            totalPrice = totalPrice + 120;
-            break;
-        case toppings = "beef":
-            totalPrice = totalPrice + 180;
-            break;
-        case toppings = "chicken":
-            totalPrice = totalPrice + 170;
-            break;
-        case toppings = "bread":
-            totalPrice = totalPrice + 150;
-            break;
-    }
-
-let newOrder = new getPizza (pizzaName,size,crust,toppings,quantity,totalPrice);
-console.log(totalPrice);
-console.log(this.pizzaName);
-// $("#receipt").append('<tr><td id="pizzaname">'+this.pizzaName +'</td><td id="pizzasize">' + 
-// newOrder.size + '</td><td id="pizzacrust">'+newOrder.crust + '</td><td id="pizzatoppings">'+newOrder.toppings+'</td><td id="pizzaquantity">'+newOrder.quantity+'</td><td id="total">'+newOrder.totalPrice+'</td></tr>');
-
-
-function pizzaSelect(){
-    console.log ("mayonniaes")
- }
+    // function pizzaSelect() {
+    //     console.log("mayonniaes")
+    // }
 });
