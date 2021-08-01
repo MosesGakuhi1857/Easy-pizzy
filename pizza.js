@@ -1,55 +1,60 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
-    $(".pick-delivery").click(function (event) {
-        // let pizzaName = $("#pizza option:selected").val();
-        // let crust = $(" #crust option:selected").val();
-        // let toppings = $("#toppings option:selected").val();
-        // let size = $("#size option:selected").val();
-        // let quantity = $("#quantity").val();
-      
-        let pizzaName = this.pizzaName;
-        let crust = this.crust;
-        let toppings = this.toppings
-        let size = this.size;
-        let quantity = this.quantity;
-        let price, totalPrice;
+    $(".pick-delivery").click(function(event) {
+        let pizzaName = $("#pizza option:selected").val();
+        let crust = $(" #crust option:selected").val();
+        let toppings = $("#toppings option:selected").val();
+        let size = $("#size option:selected").val();
+        let quantity = $("#quantity").val();
+        let total = 0;
+        // let pizzaName = this.pizzaName;
+        // let crust = this.crust;
+        // let toppings = this.toppings
+        // let size = this.size;
+        // let quantity = this.quantity;
+        // let price, totalprice;
         // console.log(pizzaName);
         // console.log(crust);
+
+
+        console.log(pizzaName);
+
         switch (pizzaName) {
             case pizzaName = "bianca":
                 switch (size) {
                     case size = "large":
                         price = 1000;
                         if (crust === "crisy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
+                            console.log(total);
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 160
+                            total = (price * quantity) + 160
                         } else if (crust === "glutten") {
-                            totalPrice = (price * quantity) + 220
+                            total = (price * quantity) + 220
                         };
 
                         break;
                     case size = "medium":
                         price = 800;
                         if (crust === "crispy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
 
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 160
+                            total = (price * quantity) + 160
 
                         } else if (crust === "glutten") {
-                            totalPrice = (price * quantity) + 220
+                            total = (price * quantity) + 220
                         };
                         break;
 
                     case size = "small":
                         price = 500;
                         if (crust === "crispy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 180
+                            total = (price * quantity) + 180
                         } else if (crust === "glutten") {
-                            totalPrice = (price * quantity) + 220
+                            total = (price * quantity) + 220
                         };
                         break;
                 }
@@ -61,35 +66,40 @@ $(document).ready(function () {
                     case size = "large":
                         price = 1000;
                         if (crust === "crisy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 160
+                            total = (price * quantity) + 160
                         } else if (crust === "glutten") {
-                            totalPrice = (price * quantity) + 220
+
+                            total = (price * quantity) + 220
+                            console.log(total);
+
                         };
 
                         break;
                     case size = "medium":
                         price = 800;
                         if (crust === "crispy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
 
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 160
+                            total = (price * quantity) + 160
+                            console.log(total);
+
 
                         } else if (crust === "glutten") {
-                            totalPrice = (price * quantity) + 220
+                            total = (price * quantity) + 220
                         };
                         break;
 
                     case size = "small":
                         price = 500;
                         if (crust === "crispy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 180
+                            total = (price * quantity) + 180
                         } else if (crust === "glutten") {
-                            totalPrice = (price * quantity) + 220
+                            total = (price * quantity) + 220
                         };
                         break;
                 }
@@ -100,37 +110,37 @@ $(document).ready(function () {
                     case size = "large":
                         price = 1000;
                         if (crust === "crisy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 160
+                            total = (price * quantity) + 160
                         } else if (crust === "Glutten-free") {
-                            totalPrice = (price * quantity) + 220
+                            total = (price * quantity) + 220
                         };
 
                         break;
                     case size = "medium":
                         price = 800;
                         if (crust === "crispy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
 
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 160
+                            total = (price * quantity) + 160
 
                         } else if (crust === "Glutten-free") {
-                            totalPrice = (price * quantity) + 220
+                            total = (price * quantity) + 220
                         };
                         break;
-                        this.totalPrice = totalPrice;
+                        totalprice = total;
 
 
                     case size = "small":
                         price = 500;
                         if (crust === "crispy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 180
+                            total = (price * quantity) + 180
                         } else if (crust === "glutten") {
-                            totalPrice = (price * quantity) + 220
+                            total = (price * quantity) + 220
                         };
                         break;
                 }
@@ -141,35 +151,35 @@ $(document).ready(function () {
                     case size = "large":
                         price = 1000;
                         if (crust === "crisy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 160
+                            total = (price * quantity) + 160
                         } else if (crust === "glutten") {
-                            totalPrice = (price * quantity) + 220
+                            total = (price * quantity) + 220
                         };
 
                         break;
                     case size = "medium":
                         price = 800;
                         if (crust === "crispy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
 
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 160
+                            total = (price * quantity) + 160
 
                         } else if (crust === "glutten") {
-                            totalPrice = (price * quantity) + 220
+                            total = (price * quantity) + 220
                         };
                         break;
 
                     case size = "small":
                         price = 500;
                         if (crust === "crispy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 180
+                            total = (price * quantity) + 180
                         } else if (crust === "glutten") {
-                            totalPrice = (price * quantity) + 220
+                            total = (price * quantity) + 220
                         };
                         break;
                 }
@@ -180,35 +190,35 @@ $(document).ready(function () {
                     case size = "large":
                         price = 1000;
                         if (crust === "crisy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 160
+                            total = (price * quantity) + 160
                         } else if (crust === "glutten") {
-                            totalPrice = (price * quantity) + 220
+                            total = (price * quantity) + 220
                         };
 
                         break;
                     case size = "medium":
                         price = 800;
                         if (crust === "crispy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
 
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 160
+                            total = (price * quantity) + 160
 
                         } else if (crust === "glutten") {
-                            totalPrice = (price * quantity) + 220
+                            total = (price * quantity) + 220
                         };
                         break;
 
                     case size = "small":
                         price = 500;
                         if (crust === "crispy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 180
+                            total = (price * quantity) + 180
                         } else if (crust === "glutten") {
-                            totalPrice = (price * quantity) + 220
+                            total = (price * quantity) + 220
                         };
                         break;
                 }
@@ -219,35 +229,35 @@ $(document).ready(function () {
                     case size = "large":
                         price = 1000;
                         if (crust === "crisy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 160
+                            total = (price * quantity) + 160
                         } else if (crust === "glutten") {
-                            totalPrice = (price * quantity) + 220
+                            total = (price * quantity) + 220
                         };
 
                         break;
                     case size = "medium":
                         price = 800;
                         if (crust === "crispy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
 
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 160
+                            total = (price * quantity) + 160
 
                         } else if (crust === "glutten") {
-                            totalPrice = (price * quantity) + 220
+                            total = (price * quantity) + 220
                         };
                         break;
 
                     case size = "small":
                         price = 500;
                         if (crust === "crispy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 180
+                            total = (price * quantity) + 180
                         } else if (crust === "glutten") {
-                            totalPrice = (price * quantity) + 220
+                            total = (price * quantity) + 220
                         };
                         break;
                 }
@@ -258,35 +268,35 @@ $(document).ready(function () {
                     case size = "large":
                         price = 1000;
                         if (crust === "crisy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 160
+                            total = (price * quantity) + 160
                         } else if (crust === "glutten") {
-                            totalPrice = (price * quantity) + 220
+                            total = (price * quantity) + 220
                         };
 
                         break;
                     case size = "medium":
                         price = 800;
                         if (crust === "crispy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
 
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 160
+                            total = (price * quantity) + 160
 
                         } else if (crust === "glutten") {
-                            totalPrice = (price * quantity) + 220
+                            total = (price * quantity) + 220
                         };
                         break;
 
                     case size = "small":
                         price = 500;
                         if (crust === "crispy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 180
+                            total = (price * quantity) + 180
                         } else if (crust === "glutten") {
-                            totalPrice = (price * quantity) + 220
+                            total = (price * quantity) + 220
                         };
                         break;
                 }
@@ -297,35 +307,35 @@ $(document).ready(function () {
                     case size = "large":
                         price = 1000;
                         if (crust === "crisy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 160
+                            total = (price * quantity) + 160
                         } else if (crust === "glutten") {
-                            totalPrice = (price * quantity) + 220
+                            total = (price * quantity) + 220
                         };
 
                         break;
                     case size = "medium":
                         price = 800;
                         if (crust === "crispy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
 
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 160
+                            total = (price * quantity) + 160
 
                         } else if (crust === "glutten") {
-                            totalPrice = (price * quantity) + 220
+                            total = (price * quantity) + 220
                         };
                         break;
 
                     case size = "small":
                         price = 500;
                         if (crust === "crispy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 180
+                            total = (price * quantity) + 180
                         } else if (crust === "glutten") {
-                            totalPrice = (price * quantity) + 220
+                            total = (price * quantity) + 220
                         };
                         break;
                 }
@@ -336,35 +346,35 @@ $(document).ready(function () {
                     case size = "large":
                         price = 1000;
                         if (crust === "crisy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 160
+                            total = (price * quantity) + 160
                         } else if (crust === "glutten") {
-                            totalPrice = (price * quantity) + 220
+                            total = (price * quantity) + 220
                         };
 
                         break;
                     case size = "medium":
                         price = 800;
                         if (crust === "crispy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
 
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 160
+                            total = (price * quantity) + 160
 
                         } else if (crust === "glutten") {
-                            totalPrice = (price * quantity) + 220
+                            total = (price * quantity) + 220
                         };
                         break;
 
                     case size = "small":
                         price = 500;
                         if (crust === "crispy") {
-                            totalPrice = (price * quantity) + 250
+                            total = (price * quantity) + 250
                         } else if (crust === "stuffed") {
-                            totalPrice = (price * quantity) + 180
+                            total = (price * quantity) + 180
                         } else if (crust === "glutten") {
-                            totalPrice = (price * quantity) + 220
+                            total = (price * quantity) + 220
                         };
                         break;
                 }
@@ -373,88 +383,94 @@ $(document).ready(function () {
         }
         switch (toppings) {
             case toppings = "pineapple":
-                totalPrice = totalPrice + 150;
+                total = total + 150;
                 break;
             case toppings = "tomato":
-                totalPrice = totalPrice + 120;
+                total = total + 120;
                 break;
             case toppings = "avocado":
-                totalPrice = totalPrice + 120;
+                total = total + 120;
                 break;
             case toppings = "beef":
-                totalPrice = totalPrice + 180;
+                total = total + 180;
                 break;
             case toppings = "chicken":
-                totalPrice = totalPrice + 170;
+                total = total + 170;
                 break;
             case toppings = "bread":
-                totalPrice = totalPrice + 150;
+                total = total + 150;
                 break;
         }
-        this.totalPrice = totalPrice;
-        document.getElementById("total").innerHTML = this.totalPrice;
+        console.log(total);
 
-        // let newOrder = new getPizza (pizzaName,size,crust,toppings,quantity,totalPrice);
-        console.log(totalPrice);
-        console.log(this.pizzaName);
-        event.preventDefault(); 
-    })  
+        let newOrder = new getPizza(pizzaName, size, crust, toppings, quantity, total);
+        console.log(pizzaName);
+
+        // let newOrder = getPizza(pizzaName, size, crust, toppings, quantity, total);
+
+        $("#receipt").append('<tr><td id="pizzaname">' + newOrder.pizzaName + '</td><td id="pizzasize">' +
+            newOrder.size + '</td><td id="pizzacrust">' + newOrder.crust + '</td><td id="pizzatoppings">' + newOrder.toppings + '</td><td id="pizzaquantity">' + newOrder.quantity + '</td><td id="total">' + newOrder.total + '</td></tr>');
+
+        event.preventDefault();
+
+
+    });
     // appending
-    pizzaSelectChange = function () {
+    pizzaSelectChange = function() {
         console.log("mayonnaise")
 
         this.pizzaName = $("#pizza option:selected").val();
         console.log(this.pizzaName);
 
-        document.getElementById("pizzaname").innerHTML = this.pizzaName;
+        //document.getElementById("pizzaname").innerHTML = this.pizzaName;
     }
 
-    sizeSelectChange = function () {
+    sizeSelectChange = function() {
         this.size = $("#size option:selected").val();
         console.log(this.size);
 
-        document.getElementById("pizzasize").innerHTML = this.size;
+        //document.getElementById("pizzasize").innerHTML = this.size;
     }
 
-    crustSelectChange = function () {
+    crustSelectChange = function() {
         this.crust = $("#crust option:selected").val();
         console.log(this.crust);
 
-        document.getElementById("pizzacrust").innerHTML = this.crust;
+        // document.getElementById("pizzacrust").innerHTML = this.crust;
     }
 
-    toppingsSelectChange = function () {
+    toppingsSelectChange = function() {
         this.toppings = $("#toppings option:selected").val();
         console.log(this.crust);
 
-        document.getElementById("pizzatoppings").innerHTML = this.toppings;
+        //document.getElementById("pizzatoppings").innerHTML = this.toppings;
     }
 
-    quantitySelectChange = function () {
-        this.quantity = $("#quantity").val();
-        console.log(this.quantity);
+    quantitySelectChange = function() {
+            this.quantity = $("#quantity").val();
+            console.log(this.quantity);
 
-        document.getElementById("pizzaquantity").innerHTML = this.quantity;
-    }
-    // this.totalPrice = totalPrice ;
-    // document.getElementById("total").innerHTML=this.totalPrice;
-    // end of appending
+            //   document.getElementById("pizzaquantity").innerHTML = this.quantity;
+        }
+        // totalprice = total ;
+        // document.getElementById("total").innerHTML=totalprice;
+        // end of appending
 
-    function getPizza(pizzaName, size, crust, toppings, quantity, totalPrice) {
+    function getPizza(pizzaName, size, crust, toppings, quantity, totalprice) {
         this.pizzaName = pizzaName;
         this.size = size;
         this.crust = crust;
         this.toppings = toppings;
         this.quantity = quantity;
-        this.total = totalPrice;
+        this.total = totalprice;
     }
     // let pizzaName = $("#pizza option:selected").val();
     // let crust = $(" #crust option:selected").val();
     // let quantity = $("#quantity").val();
-    //  let price, totalPrice;
+    //  let price, total;
 
     // $("#receipt").append('<tr><td id="pizzaname">'+this.pizzaName +'</td><td id="pizzasize">' + 
-    // newOrder.size + '</td><td id="pizzacrust">'+newOrder.crust + '</td><td id="pizzatoppings">'+newOrder.toppings+'</td><td id="pizzaquantity">'+newOrder.quantity+'</td><td id="total">'+newOrder.totalPrice+'</td></tr>');
+    // newOrder.size + '</td><td id="pizzacrust">'+newOrder.crust + '</td><td id="pizzatoppings">'+newOrder.toppings+'</td><td id="pizzaquantity">'+newOrder.quantity+'</td><td id="total">'+newOrder.total+'</td></tr>');
 
 
 
