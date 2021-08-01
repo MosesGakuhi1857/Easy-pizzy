@@ -262,7 +262,7 @@
                 <div class="col-lg-6 form">
                     <form action="">
                         <label for="pizza">Pick your poison</label>
-                        <select name="pizza" class="form-control" id="pizza">
+                        <select name="pizza" class="form-control" id="pizza" onchange="pizzaSelectChange()">
                             <option value="bianca">BIANCA</option>
                             <option value="gianni">GIANNI</option>
                             <option value="soprano">SOPRANO</option>
@@ -275,21 +275,21 @@
                         </select><br>
 
                         <label for="size">Size</label>
-                        <select name="size" class="form-control" id="size">
+                        <select name="size" class="form-control" id="size" onchange="sizeSelectChange()">
                             <option value="large">large</option>
                             <option value="medium">medium</option>
                             <option value="small">small</option>
                         </select><br>
 
                         <label for="crust">Crust</label><br>
-                        <select type="" name="crust" class="form-control" id="crust">
+                        <select type="" name="crust" class="form-control" id="crust" onchange="crustSelectChange()">
                             <option value="crispy">Crispy</option>
                             <option value="stuffed">Stuffed</option>
                             <option value="glutten">Glutten-free</option>
                         </select><br>
 
                         <label for="toppings">Toppings</label>
-                        <select name="toppings" class="form-control" id="toppings">
+                        <select name="toppings" class="form-control" id="toppings" onchange="toppingsSelectChange()">
                             <option value="pineapple">pineapple @ 150</option>
                             <option value="tomato">Tomato @ 120</option>
                             <option value="avocado">Avocado @ 120</option><br>
@@ -300,14 +300,17 @@
                         </select><br>
 
                         <label for="quantity">quantity</label>
-                        <input type="number" name="quantity" class="form-control" id="quantity" min="1" placeholder="0"><br>
+                        <input type="number" name="quantity" class="form-control" id="quantity" min="1" onchange="quantitySelectChange()"
+                            placeholder="0"><br>
+                            <label for="quantity">quantity</label>
+                     
                         <div class="d-flex">
-                            <button class="form-control pick-delivery" >delivery</button>
+                            <button class="form-control pick-delivery">delivery</button>
                             <button class="form-control  pick-delivery">pick up</button>
                         </div>
                     </form>
                 </div>
-                <div class="col-lg-6" >
+                <div class="col-lg-6">
                     <form action="" id="form2">
                         <label for="fullNames">full names</label><br>
                         <input type="text" class="form-control" placeholder="name"><br>
@@ -321,21 +324,31 @@
 
                     <table class="table">
                         <thead>
-                          <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                          </tr>
+                            <tr>
+                                <!-- <th scope="col">#</th> -->
+                                <th scope="col">pizza</th>
+                                <th scope="col">size</th>
+                                <th scope="col">crust</th>
+                                <th scope="col">toppings</th>
+                                <th scope="col">quantity</th>
+                                <th scope="col">total</th>
+                            </tr>
                         </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                          </tr>
-                        
+                        <tbody id="receipt">
+                            <tr>
+                                <!-- <th scope="row">1</th> -->
+                                <!-- <td id="no:"></td> -->
+                                <td id="pizzaname"></td>
+                                <td id="pizzasize"></td>
+                                <td id="pizzacrust"></td>
+                                <td id="pizzatoppings"></td>
+                                <td id="pizzaquantity"></td>
+                                <td id="total"></td>
+
+                            </tr>
+
                         </tbody>
-                      </table>
+                    </table>
                 </div>
 
             </div>
