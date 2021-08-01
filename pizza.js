@@ -1,12 +1,22 @@
 $(document).ready(function() {
+          
+$(".pick-delivery").click(function(event){
+    $(".form2").show();
+    event.preventDefault()
+})
+$(".pick").click(function(event){
+    alert("thank you our trusted customer for shopping with us.Don't forget to leave your comment on our services")
+    event.preventDefault()
+})
 
-    $(".pick-delivery").click(function(event) {
+    $(".addCart").click(function(event) {
         let pizzaName = $("#pizza option:selected").val();
         let crust = $(" #crust option:selected").val();
         let toppings = $("#toppings option:selected").val();
         let size = $("#size option:selected").val();
         let quantity = $("#quantity").val();
         let total = 0;
+
         // let pizzaName = this.pizzaName;
         // let crust = this.crust;
         // let toppings = this.toppings
@@ -69,12 +79,7 @@ $(document).ready(function() {
                             total = (price * quantity) + 250
                         } else if (crust === "stuffed") {
                             total = (price * quantity) + 160
-                        } else if (crust === "glutten") {
-
-                            total = (price * quantity) + 220
-                            console.log(total);
-
-                        };
+                        } else if (crust === "glutten") + 220
 
                         break;
                     case size = "medium":
