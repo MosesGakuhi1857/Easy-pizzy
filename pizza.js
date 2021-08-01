@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     $(".pick-delivery").click(function () {
-        let pizzaName = $("#pizza option:selected").val();
+     9
         let crust = $(" #crust option:selected").val();
         let toppings = $("#toppings option:selected").val();
         let size = $("#size option:selected").val();
@@ -9,18 +9,33 @@ $(document).ready(function () {
         console.log(pizzaName);
         console.log(crust);
     })
+    pizzaSelectChange = function(){
+        console.log("mayonnaise")
+        
+        this.pizzaName = $("#pizza option:selected").val();
+        console.log(this.pizzaName);
+        
+        document.getElementById("pizzaname").innerHTML=this.pizzaName;
+    }
 
-    let order = (p, s, c, t, n, total) => {
-        return {p, s, c, t, n, total};
-    };
+
+    function getPizza  (pizzaName, size, crust, toppings, quantity, totalPrice){
+        this.pizzaName = pizzaName;
+        this.size=size;
+        this.crust=crust;
+        this.toppings=toppings;
+        this.quantity=quantity;
+        this.total=totalPrice;
+    }
 
 
-    let price, totalPrice;
+
     var pizzaName = $("#pizza option:selected").val();
-    let toppings = $("#toppings option:selected").val();
+    var toppings = $("#toppings option:selected").val();
     let size = $("#size option:selected").val();
+    let crust = $(" #crust option:selected").val();
     let quantity = $("#quantity").val();
-    
+    let price, totalPrice;
     switch (pizzaName) {
         case pizzaName = "bianca":
             switch (size) {
@@ -396,7 +411,14 @@ $(document).ready(function () {
             break;
     }
 
-let newOrder = order (pizzaName,size,crust,toppings,quantity,totalPrice);
-console.log(newOrder);
+let newOrder = new getPizza (pizzaName,size,crust,toppings,quantity,totalPrice);
+console.log(totalPrice);
+console.log(this.pizzaName);
+// $("#receipt").append('<tr><td id="pizzaname">'+this.pizzaName +'</td><td id="pizzasize">' + 
+// newOrder.size + '</td><td id="pizzacrust">'+newOrder.crust + '</td><td id="pizzatoppings">'+newOrder.toppings+'</td><td id="pizzaquantity">'+newOrder.quantity+'</td><td id="total">'+newOrder.totalPrice+'</td></tr>');
 
+
+function pizzaSelect(){
+    console.log ("mayonniaes")
+ }
 });
