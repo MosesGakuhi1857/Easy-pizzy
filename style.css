@@ -192,6 +192,10 @@ table{
 .form2{
 display: none;
 }
+#customerMessage{
+    background-color:rgba(0,0,0,0.5);
+    color: #fff;
+}
 /* end of section 4 */
 
 /* footer */
