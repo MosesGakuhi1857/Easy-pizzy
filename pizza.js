@@ -483,14 +483,14 @@ $(document).ready(function () {
             let customerLocation = $("#customerLocation").val();
             let customerTel = $("#customerTel").val();
             let totalCost = totalprice + 250;
-            $("#form2").toggle(),
+            $("#form2").toggle();
                 // alert(customerName +' '+"your delivery request has been received and will be delivered in 45 minutes time, at "+ customerLocation +" once the yummy gets at the specified location you will be contacted on "+ customerTel +" so put your phone close.Your total cost will be"+ total+250 )
 
 
                 $("#customerMessage").append(customerName + ' ' + "your delivery request has been received and will be deliverd at " + customerLocation + ", once the food arrives you will be contacted on this number " + customerTel + " your total will be " + totalCost + " plus delivery fee thankyou for shopping with easy pizzy ");
                
             event.preventDefault();
-            $("#customerMessage").slidedown(4000);
+    
         })
 
     }
