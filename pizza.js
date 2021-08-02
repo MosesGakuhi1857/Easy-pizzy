@@ -1,15 +1,15 @@
-$(document).ready(function() {
-          
-$(".pick-delivery").click(function(event){
-    $(".form2").show();
-    event.preventDefault()
-})
-$(".pick").click(function(event){
-    alert("thank you our trusted customer for shopping with us.Don't forget to leave your comment on our services")
-    event.preventDefault()
-})
+$(document).ready(function () {
 
-    $(".addCart").click(function(event) {
+    $(".pick-delivery").click(function (event) {
+        $(".form2").show();
+        event.preventDefault()
+    })
+    $(".pick").click(function (event) {
+        alert("thank you our trusted customer for shopping with us.Don't forget to leave your comment on our services")
+
+    })
+
+    $(".addCart").click(function (event) {
         let pizzaName = $("#pizza option:selected").val();
         let crust = $(" #crust option:selected").val();
         let toppings = $("#toppings option:selected").val();
@@ -421,7 +421,7 @@ $(".pick").click(function(event){
 
     });
     // appending
-    pizzaSelectChange = function() {
+    pizzaSelectChange = function () {
         console.log("mayonnaise")
 
         this.pizzaName = $("#pizza option:selected").val();
@@ -430,36 +430,36 @@ $(".pick").click(function(event){
         //document.getElementById("pizzaname").innerHTML = this.pizzaName;
     }
 
-    sizeSelectChange = function() {
+    sizeSelectChange = function () {
         this.size = $("#size option:selected").val();
         console.log(this.size);
 
         //document.getElementById("pizzasize").innerHTML = this.size;
     }
 
-    crustSelectChange = function() {
+    crustSelectChange = function () {
         this.crust = $("#crust option:selected").val();
         console.log(this.crust);
 
         // document.getElementById("pizzacrust").innerHTML = this.crust;
     }
 
-    toppingsSelectChange = function() {
+    toppingsSelectChange = function () {
         this.toppings = $("#toppings option:selected").val();
         console.log(this.crust);
 
         //document.getElementById("pizzatoppings").innerHTML = this.toppings;
     }
 
-    quantitySelectChange = function() {
-            this.quantity = $("#quantity").val();
-            console.log(this.quantity);
+    quantitySelectChange = function () {
+        this.quantity = $("#quantity").val();
+        console.log(this.quantity);
 
-            //   document.getElementById("pizzaquantity").innerHTML = this.quantity;
-        }
-        // totalprice = total ;
-        // document.getElementById("total").innerHTML=totalprice;
-        // end of appending
+        //   document.getElementById("pizzaquantity").innerHTML = this.quantity;
+    }
+    // totalprice = total ;
+    // document.getElementById("total").innerHTML=totalprice;
+    // end of appending
 
     function getPizza(pizzaName, size, crust, toppings, quantity, totalprice) {
         this.pizzaName = pizzaName;
@@ -468,18 +468,31 @@ $(".pick").click(function(event){
         this.toppings = toppings;
         this.quantity = quantity;
         this.total = totalprice;
+
+        // let pizzaName = $("#pizza option:selected").val();
+        // let crust = $(" #crust option:selected").val();
+        // let quantity = $("#quantity").val();
+        //  let price, total;
+        // function pizzaSelect() {
+        //     console.log("mayonniaes")
+        // }
+
+
+        $(".checkout").click(function (event) {
+            let customerName = $("#customerName").val();
+            let customerLocation = $("#customerLocation").val();
+            let customerTel = $("#customerTel").val();
+            let totalCost = totalprice + 250;
+            $("#form2").toggle(),
+                // alert(customerName +' '+"your delivery request has been received and will be delivered in 45 minutes time, at "+ customerLocation +" once the yummy gets at the specified location you will be contacted on "+ customerTel +" so put your phone close.Your total cost will be"+ total+250 )
+
+
+                $("#customerMessage").append(customerName + ' ' + "your delivery request has been received and will be deliverd at " + customerLocation + ", once the food arrives you will be contacted on this number " + customerTel + " your total will be " + totalCost + " plus delivery fee thankyou for shopping with easy pizzy ");
+               
+            event.preventDefault();
+            $("#customerMessage").slidedown(4000);
+        })
+
     }
-    // let pizzaName = $("#pizza option:selected").val();
-    // let crust = $(" #crust option:selected").val();
-    // let quantity = $("#quantity").val();
-    //  let price, total;
 
-    // $("#receipt").append('<tr><td id="pizzaname">'+this.pizzaName +'</td><td id="pizzasize">' + 
-    // newOrder.size + '</td><td id="pizzacrust">'+newOrder.crust + '</td><td id="pizzatoppings">'+newOrder.toppings+'</td><td id="pizzaquantity">'+newOrder.quantity+'</td><td id="total">'+newOrder.total+'</td></tr>');
-
-
-
-    // function pizzaSelect() {
-    //     console.log("mayonniaes")
-    // }
 });
